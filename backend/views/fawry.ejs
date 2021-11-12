@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.8.0/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.8.0/css/react-select.css" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="origin-trial" content="">
+</head>
+
+<body>
+    <!-- Import FawryPay Staging JavaScript Library-->
+    <!-- <script type="text/javascript"
+        src="https://atfawry.fawrystaging.com/ECommercePlugin/scripts/V2/FawryPay.js"></script> -->
+
+
+    <!-- Import FawryPay Staging JavaScript Library-->
+    <!-- <script type="text/javascript" src="https://atfawry.fawrystaging.com/ECommercePlugin/scripts/FawryPay.js"></script> -->
+    <!-- FawryPay Checkout Button -->
+    <!-- <input
+        type="image"
+        onclick="FawryPay.checkout(JSON.parse('<%= chargeRequest %>'),'<%= successPageUrl %>','<%= failerPageUrl %>');"
+        src="https://www.atfawry.com/assets/img/FawryPayLogo.jpg"
+    /> -->
+
+    <!-- <script type="text/javascript">
+        // let successPageUrl = '<%- successPageUrl %>'
+        // let failerPageUrl = '<%- failerPageUrl %>';
+        // let chargeRequest = '<%- chargeRequest %>';
+
+        let chargeRequest =
+        {
+            // language: "ar-eg",
+            language: "en-us",
+            // merchantCode: "1tSa6uxz2nRbgY+b+cZGyA==",
+            merchantCode: "1tSa6uxz2nQyGUuyCUXt9Q==",
+            merchantRefNumber: "2312465464",
+            customer: {
+                name: name,
+                mobile: mobile,
+                email: email,
+                // customerProfileId: "8723871236"
+            },
+            order: {
+                description: "test bill inq",
+                expiry: 2,
+                orderItems: [{
+                    // productSKU: 12222,
+                    description: "Test Product",
+                    price: 75,
+                    quantity: 2,
+                    width: 10,
+                    height: 5,
+                    length: 100,
+                    weight: 1
+                }]
+            },
+            // signature: "2ca4c078ab0d4c50ba90e31b3b0339d4d4ae5b32f97092dd9e9c07888c7eef36",
+            signature: "57e372c3479a49909fac9bd5192b4ab1",
+            description: "example description"
+        };
+
+        // const chargeRequest = {
+        //     language: "en-us",
+        //     merchantCode: "1tSa6uxz2nQyGUuyCUXt9Q==",
+        //     merchantRefNumber: "100", // "99100000094643",
+        //     customer: {
+        //         name: "Omar El-Naggar",
+        //         mobile: "01061056839",
+        //         email: "omar-el-naggar@hotmail.com",
+        //     },
+        //     order: {
+        //         description: "test bill inq",
+        //         expiry: "2",
+        //         orderItems: [
+        //             {
+        //                 description: "Test Product",
+        //                 price: "50",
+        //                 quantity: "1",
+        //                 length: "100",
+        //                 weight: "1",
+        //             },
+        //         ],
+        //     },
+        //     signature: "57e372c3479a49909fac9bd5192b4ab1",
+        // };
+        const successPageUrl = "https://apidev.darisly.com/v1/payments";
+        const failerPageUrl = "https://apidev.darisly.com/v1/payments";
+        FawryPay.checkout(chargeRequest, successPageUrl, failerPageUrl);
+    </script> -->
+
+
+    <script type="text/javascript">
+        let successPageUrl = "https://success.page.com";
+        let failerPageUrl = "https://failure.page.com";
+        // let successPageUrl = "https://apidev.darisly.com/v1/payments";
+        // let failerPageUrl = "https://apidev.darisly.com/v1/payments";
+        let email = "omar-el-naggar@hotmail.com";
+        let mobile=  "01061056839";
+        let name = "Omar El-Naggar";
+                
+        let chargeRequest =
+        {
+            // language: "ar-eg",
+            language: "en-us",
+            // merchantCode: "1tSa6uxz2nRbgY+b+cZGyA==",
+            merchantCode: "1tSa6uxz2nQyGUuyCUXt9Q==",
+            merchantRefNumber: "67",
+            customer: {
+                name: name,
+                mobile: mobile,
+                email: email,
+                customerProfileId: "8723871236"
+            },
+            order: {
+                description: "test bill inq",
+                expiry: 2,
+                orderItems: [{
+                    // productSKU: 12222,
+                    description: "Test Product",
+                    price: 75,
+                    quantity: 2,
+                    width: 10,
+                    height: 5,
+                    length: 100,
+                    weight: 1
+                }]
+            },
+            // signature: "2ca4c078ab0d4c50ba90e31b3b0339d4d4ae5b32f97092dd9e9c07888c7eef36",
+            // signature: "57e372c3479a49909fac9bd5192b4ab1",
+            signature: "243d69d005ba46943c5f8d590cf7f8ad6c02663a838ca5b7039c33e03ad10799",
+            description: "example description"
+        };
+        // Redirect to FawryPay checkout page
+        window.location.replace("https://atfawry.fawrystaging.com/ECommercePlugin/FawryPay.jsp?chargeRequest="
+            + JSON.stringify(chargeRequest) + "&successPageUrl=" + successPageUrl + "&failerPageUrl=" + failerPageUrl);
+    </script>
+
+</body>
+
+</html>

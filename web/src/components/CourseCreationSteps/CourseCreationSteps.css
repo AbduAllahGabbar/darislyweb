@@ -1,0 +1,67 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Form Progress */
+
+.progress {
+  margin: 20px auto;
+  text-align: center;
+  padding-bottom: 80px;
+}
+.progress .circle,
+.progress .bar {
+  display: inline-block;
+  background: #aeaeae;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: 0.5px solid #aeaeae;
+  vertical-align: top;
+}
+.progress .bar {
+  position: relative;
+  width: 80px;
+  height: 3px;
+  margin: 0 0 17px 0;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  top: 18px;
+  vertical-align: top;
+}
+.progress .circle .label {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 32px;
+  margin-top: 3px;
+  color: #fff;
+  font-size: 25px;
+}
+.progress .circle .title {
+  color: #aeaeae;
+  font-size: 15px;
+  line-height: 18px;
+  margin-left: -30px;
+  display: block;
+  width: 100px;
+  margin-top: 5px;
+}
+
+.progress .circle.active {
+  background: #0eb582;
+  border: 1px solid #0eb582;
+}
+
+.progress .circle.active .label {
+  color: #fff;
+  background: #0eb582;
+}
+.progress .circle.active .title {
+  color: #0eb582;
+}

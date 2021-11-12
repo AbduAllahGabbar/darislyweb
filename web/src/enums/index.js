@@ -1,0 +1,60 @@
+export default {
+  UserRoles: {
+    STUDENT: 0,
+    TUTOR: 1,
+    STAFF: 2,
+  },
+  Grades: {
+    GRADE_1: 0,
+    GRADE_2: 1,
+    GRADE_3: 2,
+    GRADE_4: 3,
+    GRADE_5: 4,
+    GRADE_6: 5,
+    GRADE_7: 6,
+    GRADE_8: 7,
+    GRADE_9: 8,
+    GRADE_10: 9,
+    GRADE_11: 10,
+    GRADE_12: 11,
+  },
+  Educations: {
+    NATIONAL: 0,
+    IGCSE: 1,
+    AMERICAN: 2,
+  },
+  CourseTypes: {
+    ONLINE: 0,
+    CENTER: 1,
+    BOTH: 2,
+  },
+  OrderStatus: {
+    VALIDATE: 0,
+    RETURN: 1,
+    EXPIRED: 2,
+    RETURNED: 3,
+    CANCELLED: 4,
+    FAILED: 5,
+  },
+  Attendance: {
+    PRESENT: 0,
+    LATE: 1,
+    ABSENT: 2,
+    EXCUSED: 3,
+  },
+  NotificationTypes: {
+    ANNOUNCEMENT: 0,
+    LECTURE_VIDEO: 1,
+    LIVE_MEETING: 2,
+  },
+  OrderTypes: {
+    CASH: 0,
+    CREDIT: 1,
+    FAWRY_CASH: 2,
+    FREE: 3,
+  },
+  QuizTypes: {
+    MCQ: 0,
+    DOCUMENT: 1,
+  },
+};

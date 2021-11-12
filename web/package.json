@@ -1,0 +1,74 @@
+{
+  "name": "darisly",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fullcalendar/core": "^5.2.1",
+    "@fullcalendar/daygrid": "^5.2.0",
+    "@fullcalendar/react": "^5.2.0",
+    "@material-ui/core": "4.11.0",
+    "@material-ui/icons": "4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@zoomus/websdk": "1.8.0",
+    "animate.css": "4.1.0",
+    "axios": "^0.19.2",
+    "classnames": "2.2.6",
+    "history": "4.10.1",
+    "javascript-time-ago": "^2.0.13",
+    "jss-rtl": "^0.3.0",
+    "moment": "^2.26.0",
+    "node-sass": "4.14.1",
+    "nouislider": "14.5.0",
+    "prop-types": "15.7.2",
+    "react": "^16.13.1",
+    "react-animate-on-scroll": "2.1.5",
+    "react-compound-timer": "^1.2.0",
+    "react-datetime": "2.16.3",
+    "react-dom": "^16.13.1",
+    "react-dropzone": "^11.2.0",
+    "react-facebook-login": "^4.1.1",
+    "react-google-maps": "9.4.5",
+    "react-image-gallery": "1.0.7",
+    "react-mathjax2": "0.0.2",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "3.4.1",
+    "react-slick": "0.26.1",
+    "react-swipeable-views": "0.13.9",
+    "react-tagsinput": "3.19.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "validator": "^13.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy:test": "SET REACT_APP_API_HOST=http://apitest.darisly.com/v1& npm run build",
+    "deploy:test": "aws s3 sync build/ s3://test.darisly.com"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@iconify/icons-fa-solid": "^1.0.12",
+    "@iconify/react": "^1.1.3"
+  }
+}

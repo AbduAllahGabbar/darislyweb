@@ -1,0 +1,148 @@
+import {
+  mlAuto,
+  mrAuto,
+  secondaryColor,
+} from "assets/jss/material-kit-pro-react.js";
+
+const coursesStyle = (theme) => ({
+  button: {
+    position: "relative",
+    width: "80%",
+    fontWeight: "bold",
+    fontSize: "12px",
+    lineHeight: "20px",
+    textDecoration: "none",
+    textTransform: "capitalize",
+    padding: "8px 30px",
+    margin: "0px",
+    display: "inline-flex",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      marginBottom: "5px",
+      marginTop: "5px",
+      textAlign: "left",
+      fontSize: "0.75rem",
+      "& > span:first-child": {
+        justifyContent: "center",
+      },
+    },
+  },
+  gridItem: {
+    ...mlAuto,
+    ...mrAuto,
+  },
+  datetimeContainer: {
+    width: 185,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: secondaryColor[1],
+    padding: "2px 6px",
+    marginBottom: 10,
+    borderRadius: 50,
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      alignItems: "space-between",
+      justifyContent: "center",
+      borderRadius: 10,
+      width: 160,
+    },
+  },
+  date: {
+    marginRight: 10,
+    marginLeft: 10,
+  },
+  time: {
+    padding: "5px 0px",
+    width: 65,
+    marginLeft: "auto",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  },
+  modalButton: {
+    position: "relative",
+    width: "100px",
+    fontWeight: "bold",
+    fontSize: "12px",
+    lineHeight: "20px",
+    textDecoration: "none",
+    textTransform: "capitalize",
+    padding: "6px 15px",
+    margin: "10px",
+    display: "inline-flex",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      textAlign: "left",
+      fontSize: "0.75rem",
+      "& > span:first-child": {
+        justifyContent: "center",
+      },
+    },
+  },
+  quizChoice: {
+    display: "block",
+    borderRadius: "30px",
+    padding: "16px 24px",
+    margin: "10px",
+    backgroundColor: secondaryColor[1],
+    color: secondaryColor[0],
+    lineHeight: "23.5px",
+    fontSize: "17px",
+    boxShadow: "0 1.5px 12.5px 0 rgba(0, 0, 0, 0.1)",
+    cursor: "pointer",
+    textAlign: "left",
+  },
+  quizQuestion: {
+    color: secondaryColor[0],
+    fontSize: "20px",
+    textAlign: "left",
+    display: "block",
+    margin: "20px 10px",
+  },
+  quizModal: {
+    maxWidth: "500px",
+    padding: "8px 10px",
+  },
+  buttonsContainer: {
+    display: "flex",
+    justifyContent: "space-around",
+  },
+  quizModalTitle: {
+    color: secondaryColor[0],
+    fontSize: "20px",
+    textAlign: "center",
+    display: "block",
+    margin: "20px 10px",
+  },
+  modalTime: {
+    color: secondaryColor[0],
+    fontSize: "14px",
+    textAlign: "center",
+    display: "block",
+  },
+  choiceContainer: { display: "flex", alignItems: "center" },
+  choiceRadioInput: { marginRight: 10 },
+  imageConatainer: {
+    width: "100%",
+    height: "250px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
+    position: "relative",
+  },
+  quizImage: {
+    flexShrink: "0",
+    maxWidth: "90%",
+    maxHeight: "80%",
+  },
+  previewLink: {
+    position: "absolute",
+    bottom: "0",
+    right: "0",
+    cursor: "pointer",
+  },
+});
+
+export default coursesStyle;
